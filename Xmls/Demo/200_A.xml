@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Doc Type="单据" name="接口调用写入示例" ApiName="DemoApi"> 
+	<Sqls> 
+		<Sql Type="SaveHead">
+			--返回结果
+			INSERT INTO [dbo].[Users] ([UserCode], [UserName], [PasswordHash])
+			VALUES
+			( N'admin01', N'Ale01', N'1-01');
+		</Sql>
+		<Sql Type="SaveBody"> 
+			--检查数据是否合法 
+		</Sql>
+	</Sqls>  
+</Doc>

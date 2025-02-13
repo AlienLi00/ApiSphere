@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Doc Url="http://127.0.0.1:8201/api/json/set" Method="Post" ApiName="ToDemoApi" ToBillType="200_A" ToAccNo="Demo">
+	<Sqls> 
+		<Sql Type="Find">
+			--查询主子表数据一次性返回
+			--主表
+			Select iAutoId as TS,'add' as cOpFlag,CreatedDate,ModifyDate,IsActive,UserID as iId,UserCode,UserName,PasswordHash,LastLoginDate,RoleID
+			from users
+			order by iAutoId
+		</Sql>
+	</Sqls>  
+	<Log/>
+</Doc>

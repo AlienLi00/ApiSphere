@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Config>
+  <Item accNo="Demo" billType="_200_A" maxTag="TS" enabled="1" defApi="0">
+	  Select iAutoId as TS,'add' as cOpFlag,CreatedDate,ModifyDate,IsActive,UserID as iId,UserCode,UserName,PasswordHash,LastLoginDate,RoleID
+	  from users
+	  where iAutoId &gt; CAST('{0}' as INT)
+	  order by iAutoId
+  </Item>
+</Config>

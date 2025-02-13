@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Config>
+  <!--系统库-->
+  <Item Type="DB" Server="ale202501.sqlserver.rds.aliyuncs.com,3433" UserID="Ale" Pwd="P+09MClYJGSfitK2Hs+hcg==" DBName="ApiSphere"/>
+  <Items Type="Accs" Desc="账套列表" DefaultAccNo="Demo" AutoTaskXml="GenTask_Demo" >
+  	<Item AccNo="sys" Desc="ApiSphere系统" Server="ale202501.sqlserver.rds.aliyuncs.com,3433" UserID="Ale" Pwd="P+09MClYJGSfitK2Hs+hcg==" DBName="ApiSphere" DbType="0" DbTypeDesc="DbType=0为sqlserver,1为oracle"/>
+	<Item AccNo="Demo" Desc="测试数据库" Server="ale202501.sqlserver.rds.aliyuncs.com,3433" UserID="Ale" Pwd="P+09MClYJGSfitK2Hs+hcg==" DBName="TXCI" DbType="0" DbTypeDesc="DbType=0为sqlserver,1为oracle"/>
+  </Items>
+  <Items Type="Doc" TypeName="单据导入列表" desc="约定:后缀A:新增，D:删除,F:查询,M:修改">
+		<Item key="_200_A" desc="_200_A" enabled="1" cMaker="demo">_200_A</Item>
+		<Item key="200_A" desc="200_A" enabled="1" cMaker="demo">200_A</Item>
+		<Item key="200_F" desc="200_F" enabled="1" cMaker="demo">200_F</Item>
+  </Items>
+</Config>

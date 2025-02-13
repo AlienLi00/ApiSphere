@@ -1,0 +1,10 @@
+
+接口分两部分
+1.外部系统调用接口
+	1>由外部系统调用接口时入口类为DataController.cs,调用这里面相应的方法，post（本接口程序中无论是获取数据还是写入数据都是使用http Post方法）
+	2>由此类中根据BaseApi的抽象类的GetApi方法得到Api实例(获取Api实例是根据配置文件中的xml文档中的Doc节点中的ApiName属性来决定)，进行set或get数据
+	3>get和set数据方法 支持json和xml数据格式
+2.自动调用外部系统接口
+	此入口类为TimedExecutService.cs
+	1>根据GenTask.xml文件生成接口数据表的任务表(T_Task)记录，并更新最大标识表(T_TaskTag)
+	2>根据任务表(T_Task)记录来进行依次调用外部的系统的接口（如果调用外部接口是需要自己根据不同的项目进行开发）
